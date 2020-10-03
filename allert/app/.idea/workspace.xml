@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="696f327e-5857-4968-beb8-3c2e04a43d12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

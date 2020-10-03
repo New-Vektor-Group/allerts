@@ -86,8 +86,10 @@ public class ChoseRegion extends Activity{
                 break;
             case "Ukraine":
                 tmpRegion = new LatLng(50.434389, 30.556316);
+                break;
             case "Romania":
                 tmpRegion = new LatLng(44.437558, 26.090253);
+                break;
         }
         if(tmpRegion != null){
             i.putExtra("la",tmpRegion.latitude);
