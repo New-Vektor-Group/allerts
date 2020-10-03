@@ -1,4 +1,5 @@
 Data and metadata available at [ecad](https://www.ecad.eu)  
+Cloud with [data](https://next.lonagi.pw/s/GEfFF3bnM9JHML9)  
 *FILE FORMAT (MISSING VALUE CODE IS -9999)*  
 
 ## Stations
