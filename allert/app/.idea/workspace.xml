@@ -7,7 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="696f327e-5857-4968-beb8-3c2e04a43d12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/MapsFun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/MapsFun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,26 +179,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser" timestamp="1601741456368">
+    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser" timestamp="1601763043462">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1601741456368" />
-    <state width="2518" height="408" key="GridCell.Tab.0.bottom" timestamp="1601753900639">
+    <state x="1093" y="443" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1601763043462" />
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom" timestamp="1601763810040">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="408" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1601753900639" />
-    <state width="2518" height="408" key="GridCell.Tab.0.center" timestamp="1601753900637">
+    <state width="2518" height="423" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1601763810040" />
+    <state width="2518" height="423" key="GridCell.Tab.0.center" timestamp="1601763810039">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="408" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1601753900637" />
-    <state width="2518" height="408" key="GridCell.Tab.0.left" timestamp="1601753900637">
+    <state width="2518" height="423" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1601763810039" />
+    <state width="2518" height="423" key="GridCell.Tab.0.left" timestamp="1601763810038">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="408" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1601753900637" />
-    <state width="2518" height="408" key="GridCell.Tab.0.right" timestamp="1601753900638">
+    <state width="2518" height="423" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1601763810038" />
+    <state width="2518" height="423" key="GridCell.Tab.0.right" timestamp="1601763810039">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="408" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1601753900638" />
+    <state width="2518" height="423" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1601763810039" />
     <state width="2518" height="408" key="GridCell.Tab.1.bottom" timestamp="1601753900641">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -216,21 +219,5 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="789" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1601720787180" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
