@@ -16,7 +16,7 @@ function api() {
 
 		$db = R::find("redalert",'la1 >= ? and la2 <= ? and lo1 >= ? and lo2 <= ?',[$input['la1'],$input['la2'],$input['lo1'],$input['lo2']]);
 		if($db) {
-			$output=["Score"=>0];
+			$output=["Score"=>0,"dots"=>[]];
 
 			foreach ($db as $d) {
 				$output["Score"]+=1;
@@ -26,7 +26,7 @@ function api() {
 					"lo"=>(floatval($d->lo1)+floatval($d->lo2))/2
 				];
 
-				$output["dot".$output["Score"]]=$data;
+				array_push($output["dots"], $data);
 			}
 			return $output;
 		}
