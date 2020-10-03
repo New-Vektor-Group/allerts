@@ -21,6 +21,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.nvg.allert.resourseForMap.Event;
+import com.nvg.allert.resourseForMap.HttpHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,7 +39,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+import java.util.concurrent.ExecutionException;
 
 
 public class MapsActivity extends FragmentActivity implements
@@ -89,31 +90,31 @@ public class MapsActivity extends FragmentActivity implements
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-//                System.out.println(latLng.latitude + " " + latLng.longitude );
-//                String url = null;
-//                url = getUrlConection("https://api.nvg-group.com/alert.php?la=" + latLng.latitude + "&lo="+ latLng.longitude);
-//                try {
-//                    eventList.clear();
-//                    JSONObject a = new JSONObject(url);
-//                    JSONArray events = new JSONArray(a.getJSONArray("dots"));
-//                    for (int i = 0 ; i > events.length() ; i++){
-//                        JSONObject tmp = events.getJSONObject(i);
-//                        eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo")));
-//                    }
-//                }catch (JSONException e){
-//                    System.out.println(e);
-//                    System.out.println("Response parsing error");
-//                    return;
-//                }
-//                mMap.clear();
-//                if(!(eventList.isEmpty())) {
-//                    for (Event i : eventList) {
-//                        mMap.addMarker(new MarkerOptions().position(i.latLng).title("dot"));
-//                        mMap.moveCamera(CameraUpdateFactory.newLatLng(i.latLng));
-//                    }
-//                }
-                mMap.addMarker(new MarkerOptions().position(latLng).title("dot"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                System.out.println(latLng.latitude + " " + latLng.longitude );
+                String url = null;
+                url = getResponse("https://api.nvg-group.com/alert.php?la=" + latLng.latitude + "&lo="+ latLng.longitude);
+                try {
+                    eventList.clear();
+                    JSONObject a = new JSONObject(url);
+                    JSONArray events = a.getJSONArray("dots");
+                    for (int i = 0 ; i < events.length() ; i++){
+                        JSONObject tmp = events.getJSONObject(i);
+                        eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo")));
+                    }
+                }catch (JSONException e){
+                    System.out.println(e);
+                    System.out.println("Response parsing error");
+                    return;
+                }
+                mMap.clear();
+                if(!(eventList.isEmpty())) {
+                    for (Event i : eventList) {
+                        mMap.addMarker(new MarkerOptions().position(i.latLng).title("dot"));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLng(i.latLng));
+                    }
+                }
+//                mMap.addMarker(new MarkerOptions().position(latLng).title("dot"));
+//                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             }
         });
     }
@@ -149,6 +150,18 @@ public class MapsActivity extends FragmentActivity implements
             System.out.println(e);
         }
         return content.toString();
+    }
+
+    private String getResponse(String endpoint) {
+        HttpHelper helper = new HttpHelper();
+        String result = "";
+        try {
+            result = helper.execute(endpoint).get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+//        responseCode = HttpHelper.getResponseCode();
+        return result;
     }
 
 
