@@ -13,6 +13,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -72,7 +73,6 @@ public class MapsActivity extends FragmentActivity implements
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
 
     }
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -158,4 +158,14 @@ public class MapsActivity extends FragmentActivity implements
         startActivity(new Intent(
                 android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
     }
+
+
+    public void onClickInfoButton(View view)
+    {
+        Toast.makeText(getApplicationContext(), "I get some info" ,Toast.LENGTH_SHORT).show();
+
+    }
+
+
+
 }
