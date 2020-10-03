@@ -24,7 +24,7 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="1080px"
+        android:layout_width="0dp"
         android:layout_height="720px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,12 +35,12 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="347dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/button_2cr"
+        android:background="@drawable/button_2cr2"
         android:onClick="onClickSelectMap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,12 +49,12 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="347dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/button_1wa"
+        android:background="@drawable/button_1wa2"
         android:onClick="onClickSelectMap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -68,7 +68,7 @@
         android:layout_marginStart="113dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="113dp"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="sans-serif-black"
         android:text="Information"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -83,7 +83,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="sans-serif-medium"
         android:text="This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter Rams, both of whom have work featured in the Museum’s collection. The large 0 alerts features a numbered face, and the smaller watch has only index lines."
         android:textColor="#050505"
         android:textSize="14sp"
