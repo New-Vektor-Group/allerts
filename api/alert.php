@@ -5,7 +5,7 @@ include_once "db.php";
 
 function api() {
 	if(isset($_GET['la']) and isset($_GET['lo'])) {
-		$radius = 111; //km
+		$radius = 50; //km
 		$radian = $radius/111;
 		$input = [
 			'la1'=>$_GET['la']-$radian,
@@ -14,7 +14,7 @@ function api() {
 			'lo2'=>$_GET['lo']+$radian
 		];
 
-		$db = R::find("redalert",'la1 >= ? and la2 <= ? and lo1 >= ? and lo2 <= ?',[$input['la1'],$input['la2'],$input['lo1'],$input['lo2']]);
+		$db = R::find("redalert",'la >= ? and la <= ? and lo >= ? and lo <= ?',[$input['la1'],$input['la2'],$input['lo1'],$input['lo2']]);
 		if($db) {
 			$output=["Score"=>0,"dots"=>[]];
 
@@ -22,8 +22,16 @@ function api() {
 				$output["Score"]+=1;
 				
 				$data = [
-					"la"=>(floatval($d->la1)+floatval($d->la2))/2,
-					"lo"=>(floatval($d->lo1)+floatval($d->lo2))/2
+					"la"=>$d->la,
+					"lo"=>$d->lo,
+					"hazard"=>"landslides",
+					"type"=>$d->types,
+					"size"=>$d->size,
+					"trigger"=>$d->trig,
+					"injuries"=>$d->injuries,
+					"fatalities"=>$d->fatalities,
+					"prob_trig"=>$d->prob_trig,
+					"country"=>$d->country
 				];
 
 				array_push($output["dots"], $data);
