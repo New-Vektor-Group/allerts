@@ -22,10 +22,8 @@ function api() {
 				$output["Score"]+=1;
 				
 				$data = [
-					"la1"=>floatval($d->la1),
-					"la2"=>floatval($d->la2),
-					"lo1"=>floatval($d->lo1),
-					"lo2"=>floatval($d->lo2)
+					"la"=>(floatval($d->la1)+floatval($d->la2))/2,
+					"lo"=>(floatval($d->lo1)+floatval($d->lo2))/2
 				];
 
 				$output["dot".$output["Score"]]=$data;
