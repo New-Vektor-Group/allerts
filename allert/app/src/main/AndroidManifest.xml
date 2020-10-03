@@ -45,6 +45,7 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".ChoseRegion" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

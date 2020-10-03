@@ -1,4 +1,32 @@
 <resources>
     <string name="app_name">allert</string>
     <string name="title_activity_maps">Map</string>
+
+    <string-array name="Coutnry">
+        <item>Choose country</item>
+        <item>Moldova</item>
+        <item>Ukraine</item>
+        <item>Romania</item>
+    </string-array>
+
+    <string-array name="RegOfMd">
+        <item>Regions of Moldova</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="RegOfUk">
+        <item>Regions of Moldova</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="RegOfRo">
+        <item>Regions of Moldova</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
 </resources>
