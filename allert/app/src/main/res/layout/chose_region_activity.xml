@@ -60,13 +60,13 @@
 
     <Spinner
         android:id="@+id/regionSpiner"
-        android:layout_width="202dp"
-        android:layout_height="37dp"
+        android:layout_width="221dp"
+        android:layout_height="36dp"
         android:layout_marginStart="106dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="104dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countrySpiner" />
 
