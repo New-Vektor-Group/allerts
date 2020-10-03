@@ -23,7 +23,7 @@ public class ChoseRegion extends Activity{
         init();
 
 
-        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {       //получаем значение выбранное в спинере
             public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
 //                Toast.makeText(getApplicationContext(),
 //                        "Запись - " + adapterView.getAdapter().getItem(pos).toString() + "\nПозиция - " + pos,
@@ -80,9 +80,14 @@ public class ChoseRegion extends Activity{
         startActivity(i);
     }
 
+    public void onClickGoWA(View view)
+    {
+        Intent i = new Intent(ChoseRegion.this, MenuControl.class);
+        Toast.makeText(getApplicationContext(),"This is work to Wiew Alert!", Toast.LENGTH_SHORT).show();
+        startActivity(i);
+    }
 
 
-        //получаем значение выбранное в спинере
 
 
 

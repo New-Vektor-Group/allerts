@@ -15,8 +15,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:srcCompat="@drawable/imgbin_warning_sign_scalable_graphics_alert_s_000a22vvemw5d3pxss8cuzq8y_300x212" />
+        app:srcCompat="@drawable/shapka_s_logo_norm"
+        tools:srcCompat="@drawable/shapka_s_logo_norm" />
 
     <Button
         android:id="@+id/button6"

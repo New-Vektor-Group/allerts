@@ -22,7 +22,7 @@ public class MenuControl extends Activity {
     }
     void init(){
         this.imgAlert = (ImageView)this.findViewById(R.id.imageView);           // подключаем картинку
-        imgAlert.setImageResource(R.drawable.imgbin_warning_sign_scalable_graphics_alert_s_000a22vvemw5d3pxss8cuzq8y_300x212);  // находим её по имени в draweble
+        imgAlert.setImageResource(R.drawable.shapka_s_logo_norm);  // находим её по имени в draweble
         tvAlerts = findViewById(R.id.txtViewInfoAlerts);
         tvAlerts.setText("This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter " +
                 "Rams, both of whom have work featured in the Museum’s collection. " +
