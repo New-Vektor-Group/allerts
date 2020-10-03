@@ -6,18 +6,19 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btnInfo"
+        android:id="@+id/btnWA"
         android:layout_width="206dp"
         android:layout_height="58dp"
-        android:text="Button"
+        android:onClick="onClickGoWA"
+        android:text="go WA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCR"
         android:layout_width="205dp"
         android:layout_height="56dp"
-        android:text="Button"
+        android:text="CR select"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

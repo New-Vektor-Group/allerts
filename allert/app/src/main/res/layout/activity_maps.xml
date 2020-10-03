@@ -15,7 +15,7 @@
         tools:context=".MapsActivity" />
 
     <Button
-        android:id="@+id/btnInfo"
+        android:id="@+id/btnWA"
         android:layout_width="1080px"
         android:layout_height="150px"
         android:onClick="onClickInfoButton"
