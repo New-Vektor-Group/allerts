@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class ChoseRegion extends Activity{
 
     Spinner dropdown;
@@ -77,13 +79,29 @@ public class ChoseRegion extends Activity{
 
     public void onClickNextMap(View view){
         Intent i = new Intent(ChoseRegion.this, MapsActivity.class);
+        LatLng tmpRegion = null;
+        switch (dropdown.getSelectedItem().toString()){
+            case "Moldova":
+                tmpRegion = new LatLng(47.025597, 28.830562);
+                break;
+            case "Ukraine":
+                tmpRegion = new LatLng(50.434389, 30.556316);
+            case "Romania":
+                tmpRegion = new LatLng(44.437558, 26.090253);
+        }
+        if(tmpRegion != null){
+            i.putExtra("la",tmpRegion.latitude);
+            i.putExtra("lo",tmpRegion.longitude);
+        }
         startActivity(i);
     }
 
     public void onClickGoWA(View view)
     {
+
         Intent i = new Intent(ChoseRegion.this, MenuControl.class);
         Toast.makeText(getApplicationContext(),"This is work to Wiew Alert!", Toast.LENGTH_SHORT).show();
+
         startActivity(i);
     }
 

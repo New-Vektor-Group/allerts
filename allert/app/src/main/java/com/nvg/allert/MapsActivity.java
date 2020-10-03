@@ -15,30 +15,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.nvg.allert.resourseForMap.Event;
 import com.nvg.allert.resourseForMap.HttpHelper;
+import com.nvg.allert.resourseForMap.MapsFun;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -50,6 +43,7 @@ public class MapsActivity extends FragmentActivity implements
     private LocationManager locationManager;
     Location userLocation;
     List<Event> eventList = new ArrayList<>();
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +66,8 @@ public class MapsActivity extends FragmentActivity implements
             return;
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-
+        intent = getIntent();
+        System.out.println();
     }
     @Override
     protected void onResume() {
@@ -87,6 +82,8 @@ public class MapsActivity extends FragmentActivity implements
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        if(intent.hasExtra("la"))
+            MapsFun.CreateMarker(mMap , new LatLng(intent.getDoubleExtra("la" , 0), intent.getDoubleExtra("lo" , 0)));
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
@@ -109,12 +106,9 @@ public class MapsActivity extends FragmentActivity implements
                 mMap.clear();
                 if(!(eventList.isEmpty())) {
                     for (Event i : eventList) {
-                        mMap.addMarker(new MarkerOptions().position(i.latLng).title("dot"));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(i.latLng));
+                        MapsFun.CreateMarker(mMap , i.latLng);
                     }
                 }
-//                mMap.addMarker(new MarkerOptions().position(latLng).title("dot"));
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
             }
         });
     }
@@ -151,7 +145,7 @@ public class MapsActivity extends FragmentActivity implements
         }
         return content.toString();
     }
-
+    //http request
     private String getResponse(String endpoint) {
         HttpHelper helper = new HttpHelper();
         String result = "";
@@ -160,25 +154,16 @@ public class MapsActivity extends FragmentActivity implements
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
-//        responseCode = HttpHelper.getResponseCode();
         return result;
     }
 
-
-
     //Button to go setting(GPS)
-    public void onClickLocationSettings(View view) {
-        startActivity(new Intent(
-                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-    }
-
-
     public void onClickInfoButton(View view)
     {
         Toast.makeText(getApplicationContext(), "I get some info" ,Toast.LENGTH_SHORT).show();
-
+        if(userLocation == null)
+        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+        MapsFun.CreateMarker(mMap , new LatLng(userLocation.getLatitude() , userLocation.getLongitude()));
     }
-
-
 
 }
