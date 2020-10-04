@@ -44,11 +44,18 @@ public class InfoMap extends Activity {
         List<ModelClassInfo> modelClassListInfo = new ArrayList<>();
         // здесь утсанавливаем значения которые хотим отобразить по примеру
         for(Event i : eventList) {
-            modelClassListInfo.add(new ModelClassInfo(R.drawable.logo_full, "Country : " + i.country
+            if(i.hazard.equals("earthquakes"))
+            modelClassListInfo.add(new ModelClassInfo(R.drawable.mini8treaska, "Country : " + i.country
                     , "Landslides probability: " + i.prob_trig
-                    , i.latLng.toString(), " hazard : " + i.hazard
+                    , "LatLong : " +i.latLng.latitude + "/" + i.latLng.longitude, " hazard : " + i.hazard
                     , "Type : " + i.type , "Size : " + i.size , "Trigger : " + i.trigger
                     , "Injuries : " + i.injuries , "Fatalities : " + i.fatalities ));
+            else
+                modelClassListInfo.add(new ModelClassInfo(R.drawable.mini8opolzeni, "Country : " + i.country
+                        , "Landslides probability: " + i.prob_trig
+                        , "LatLong : " +i.latLng.latitude + "/" + i.latLng.longitude, " hazard : " + i.hazard
+                        , "Type : " + i.type , "Size : " + i.size , "Trigger : " + i.trigger
+                        , "Injuries : " + i.injuries , "Fatalities : " + i.fatalities ));
         }
 
 

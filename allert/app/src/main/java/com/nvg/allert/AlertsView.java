@@ -41,7 +41,7 @@ public class AlertsView extends Activity {
 
     void init()
     {
-        findAllAndCreateMarkers();
+        findAllMarkers();
         recyclerView=findViewById(R.id.RecView);
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -67,7 +67,7 @@ public class AlertsView extends Activity {
 
         adapter.notifyDataSetChanged();
     }
-    public void findAllAndCreateMarkers(){
+    public void findAllMarkers(){
         String url = getResponse("https://api.nvg-group.com/alert.php?alerts");
         try {
             eventList.clear();

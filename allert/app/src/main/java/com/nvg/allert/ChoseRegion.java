@@ -85,7 +85,9 @@ public class ChoseRegion extends Activity{
     public void onClickNextMap(View view){
         Intent i = new Intent(ChoseRegion.this, MapsActivity.class);
         LatLng tmpRegion = null;
-        String region = regionSpiner.getSelectedItem().toString();
+        String region = "";
+        if (regionSpiner.checkInputConnectionProxy(regionSpiner))
+            region = regionSpiner.getSelectedItem().toString();
         switch (dropdown.getSelectedItem().toString()){
             case "Moldova":
                 switch (region){
