@@ -18,6 +18,10 @@ public class MapsFun {
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon8treaska));
         }else
             marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon8opolzeni));
+        marker.snippet(tmp.latLng + "\nType : " + tmp.type +
+                "\nSize : " + tmp.size + "\nTrigger : " + tmp.trigger +
+                "\nInjuries : " + tmp.injuries + "\nFatalities : " + tmp.fatalities +
+                "\nProbability : " + tmp.prob_trig  );
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(tmp.latLng));
     }

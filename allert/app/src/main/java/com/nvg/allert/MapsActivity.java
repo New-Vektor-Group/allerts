@@ -103,8 +103,9 @@ public class MapsActivity extends FragmentActivity implements
             @Override
             public boolean onMarkerClick(Marker marker) {
                 Event tmp = MapsFun.findEventInList(eventList , marker.getPosition());
-                if(tmp != null)
-                    marker.setSnippet(tmp.latLng.toString() + "" + tmp.country);
+                if(tmp != null) {
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tmp.latLng , 8.f));
+                }
                 return false;
             }
         });
