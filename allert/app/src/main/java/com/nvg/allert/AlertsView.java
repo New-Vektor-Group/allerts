@@ -105,4 +105,10 @@ public class AlertsView extends Activity {
         i.putExtra("getAll" , true);
         startActivity(i);
     }
+
+    public void onClickChoseRegion(View view)
+    {
+        Intent intent = new Intent(AlertsView.this, ChoseRegion.class);
+        startActivity(intent);
+    }
 }

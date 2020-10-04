@@ -1,7 +1,9 @@
 package com.nvg.allert;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -95,5 +97,14 @@ public class InfoMap extends Activity {
             e.printStackTrace();
         }
         return result;
+    }
+
+    public void onClickAllAlerts(View view){
+        Intent intent = new Intent(InfoMap.this, AlertsView.class);
+        startActivity(intent);
+    }
+    public void onClickAChoseReg(View view){
+        Intent inte = new Intent(InfoMap.this, ChoseRegion.class);
+        startActivity(inte);
     }
 }

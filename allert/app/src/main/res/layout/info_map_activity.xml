@@ -11,6 +11,7 @@
         android:layout_width="540px"
         android:layout_height="wrap_content"
         android:background="@drawable/button_2cr22222"
+        android:onClick="onClickAChoseReg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +28,7 @@
         android:layout_width="540px"
         android:layout_height="132px"
         android:background="@drawable/button_3allal"
+        android:onClick="onClickAllAlerts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
