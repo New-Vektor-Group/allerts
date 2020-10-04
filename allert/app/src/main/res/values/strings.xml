@@ -18,15 +18,29 @@
 
     <string-array name="RegOfUk">
         <item>Regions of Ukraine</item>
+<<<<<<< Updated upstream
         <item>Hmelisina</item>
         <item>Kiev</item>
         <item>Lvov</item>
+=======
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+
+>>>>>>> Stashed changes
     </string-array>
 
     <string-array name="RegOfRo">
         <item>Regions of Romania</item>
+<<<<<<< Updated upstream
         <item>București</item>
         <item>Craiova</item>
         <item>Cluj-Napoca</item>
+=======
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+
+>>>>>>> Stashed changes
     </string-array>
 </resources>

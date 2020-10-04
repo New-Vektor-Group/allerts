@@ -142,9 +142,7 @@ public class ChoseRegion extends Activity{
     public void onClickGoWA(View view)
     {
 
-        Intent i = new Intent(ChoseRegion.this, MenuControl.class);
-        Toast.makeText(getApplicationContext(),"This is work to Wiew Alert!", Toast.LENGTH_SHORT).show();
-
+        Intent i = new Intent(ChoseRegion.this, AlertsView.class);
         startActivity(i);
     }
 

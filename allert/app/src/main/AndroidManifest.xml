@@ -46,6 +46,7 @@
 
         </activity>
         <activity android:name=".ChoseRegion" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AlertsView" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

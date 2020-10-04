@@ -31,7 +31,7 @@ public class MenuControl extends Activity {
 
     public void onClickSelectMap(View view)     //переходим на новую активити
     {
-        Intent i = new Intent(MenuControl.this, MapsActivity.class);
+        Intent i = new Intent(MenuControl.this, AlertsView.class);
         startActivity(i);
     }
     public void onClickSelectChoseRegion(View view)     //переходим на новую активити
