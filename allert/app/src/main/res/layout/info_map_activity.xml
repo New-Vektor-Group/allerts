@@ -8,9 +8,9 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="wrap_content"
+        android:layout_width="540px"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:background="@drawable/button_2cr22222"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -18,27 +18,25 @@
         android:id="@+id/logoView"
         android:layout_width="411dp"
         android:layout_height="164dp"
-        android:layout_marginTop="15dp"
+        android:background="@drawable/white_fon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:text="Button"
+        android:layout_width="540px"
+        android:layout_height="132px"
+        android:background="@drawable/button_3allal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="412dp"
-        android:layout_height="502dp"
+        android:layout_width="409dp"
+        android:layout_height="517dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/logoView"
         tools:visibility="visible">
 
         <androidx.recyclerview.widget.RecyclerView

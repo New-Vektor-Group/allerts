@@ -21,7 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="43dp"
+        android:fontFamily="sans-serif-black"
         android:text="country, region"
+        android:textColor="#0C0C0C"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,19 +33,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-medium"
         android:text="Landslides probability: 0%"
+        android:textColor="#0C0C0C"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/regionTV" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="61dp"
-        android:layout_height="51dp"
+        android:layout_width="40dp"
+        android:layout_height="31dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="49dp"
+        android:background="@drawable/vector_13arrow"
         android:onClick="OnClickBut"
-        android:text="Next"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
