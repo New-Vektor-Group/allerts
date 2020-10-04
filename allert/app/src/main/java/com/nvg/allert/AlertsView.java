@@ -52,11 +52,11 @@ public class AlertsView extends Activity {
         for(Event i : eventList){
             //сюда пихать присваивание modelClassList.add(new ModelClass(R.drawable.shapka_s_logo_norm, "Страна", "Landslides probability: "));
             if(i.hazard.equals("earthquakes")) {
-                mdCL = new ModelClass(R.drawable.mini8treaska, "Страна : " + i.country, i.hazard + " probability: " + i.prob_trig, i.latLng , (Button)findViewById(R.id.button));
+                mdCL = new ModelClass(R.drawable.mini8treaska, "Country : " + i.country, i.hazard + " probability: " + i.prob_trig, i.latLng , (Button)findViewById(R.id.button));
                 modelClassList.add(mdCL);
             }
             else {
-                mdCL = new ModelClass(R.drawable.mini8opolzeni, "Страна : " + i.country, i.hazard + " probability: " + i.prob_trig, i.latLng , (Button)findViewById(R.id.button));
+                mdCL = new ModelClass(R.drawable.mini8opolzeni, "Country : " + i.country, i.hazard + " probability: " + i.prob_trig, i.latLng , (Button)findViewById(R.id.button));
                 modelClassList.add(mdCL);
             }
             //доделать выбор картинок в зависимости от угрозы
