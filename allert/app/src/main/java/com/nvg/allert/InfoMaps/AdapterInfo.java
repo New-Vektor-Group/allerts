@@ -24,7 +24,7 @@ public class AdapterInfo  extends RecyclerView.Adapter<AdapterInfo.Viewholder> {
     @NonNull
     @Override
     public Viewholder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_layout, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.info_map_temp, viewGroup, false);
         return new Viewholder(view);
     }
 
