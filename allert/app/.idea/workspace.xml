@@ -6,16 +6,13 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696f327e-5857-4968-beb8-3c2e04a43d12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/ChoseRegion.java" afterDir="false" />
-    </list>
+    <list default="true" id="696f327e-5857-4968-beb8-3c2e04a43d12" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RF8M30SYLJH" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
