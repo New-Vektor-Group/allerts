@@ -134,6 +134,8 @@ public class ChoseRegion extends Activity{
                         tmpRegion = new LatLng(44.437558, 26.090253);
                         break;
                 }
+            default:
+                tmpRegion = new LatLng(47.025127, 28.875276);
                 break;
         }
         if(tmpRegion != null){

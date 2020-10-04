@@ -84,14 +84,14 @@ public class MapsActivity extends FragmentActivity implements
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         findAllAndCreateMarkers();
-        if (intent.hasExtra("getAll"))
+        if (intent.hasExtra("getAll")) {
             findAllAndCreateMarkers();
+        }
         if(intent.hasExtra("la")) {
             LatLng tmp = new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0));
             findAroundAndCreateMarkers(tmp);
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tmp, 8.f));
 //            MapsFun.createMarker(mMap, new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
-            intent = null;
         }
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
@@ -189,7 +189,7 @@ public class MapsActivity extends FragmentActivity implements
             eventList.clear();
             JSONObject a = new JSONObject(url);
             JSONArray events = a.getJSONArray("dots");
-            for (int i = 0 ; i < events.length()-1 ; i++){
+            for (int i = 0 ; i < events.length() ; i++){
                 JSONObject tmp = events.getJSONObject(i);
                 eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo"),
                         tmp.getString("hazard") , tmp.getString("type") ,
