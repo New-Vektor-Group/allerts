@@ -29,4 +29,8 @@
         <item>Craiova</item>
         <item>Cluj-Napoca</item>
     </string-array>
+    <string-array name="RegOfEmpty">
+        <item>  </item>
+
+    </string-array>
 </resources>

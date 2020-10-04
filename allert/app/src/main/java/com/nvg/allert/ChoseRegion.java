@@ -32,6 +32,7 @@ public class ChoseRegion extends Activity{
 //                Toast.makeText(getApplicationContext(),
 //                        "Запись - " + adapterView.getAdapter().getItem(pos).toString() + "\nПозиция - " + pos,
 //                        Toast.LENGTH_SHORT).show();
+                setRegionEmptySpiner();
               if(adapterView.getAdapter().getItem(pos).toString().trim().equals("Moldova")) setRegionMDSpiner();
                 if(adapterView.getAdapter().getItem(pos).toString().trim().equals("Ukraine")) setRegionUKSpiner();
                 if(adapterView.getAdapter().getItem(pos).toString().trim().equals("Romania")) setRegionROSpiner();
@@ -69,6 +70,15 @@ public class ChoseRegion extends Activity{
         Spinner spinner = findViewById(R.id.regionSpiner);
         ArrayAdapter<CharSequence> adapter =
                 ArrayAdapter.createFromResource(this, R.array.RegOfRo,
+                        android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+    }
+    public void setRegionEmptySpiner()
+    {
+        Spinner spinner = findViewById(R.id.regionSpiner);
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(this, R.array.RegOfEmpty,
                         android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
