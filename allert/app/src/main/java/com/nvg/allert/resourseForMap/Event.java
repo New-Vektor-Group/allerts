@@ -8,14 +8,14 @@ public class Event {
     public String type;
     public String size;
     public String trigger;
-    public int injuries;
-    public int fatalities;
-    public double prob_trig;
+    public String injuries;
+    public String fatalities;
+    public String prob_trig;
     public String country;
 
     public Event(double la , double lo, String hazard, String type,
-                 String size, String trigger, int injuries,
-                 int fatalities, double prob_trig, String country) {
+                 String size, String trigger, String injuries,
+                 String fatalities, String prob_trig, String country) {
         this.latLng = new LatLng( la , lo);
         this.hazard = hazard;
         this.type = type;

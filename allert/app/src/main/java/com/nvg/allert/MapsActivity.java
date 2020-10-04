@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -84,7 +85,9 @@ public class MapsActivity extends FragmentActivity implements
         mMap = googleMap;
         findAllAndCreateMarkers();
         if(intent.hasExtra("la")) {
-            findAroundAndCreateMarkers(new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
+            LatLng tmp = new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0));
+            findAroundAndCreateMarkers(tmp);
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tmp, 15.f));
 //            MapsFun.createMarker(mMap, new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
             intent = null;
         }
@@ -157,8 +160,8 @@ public class MapsActivity extends FragmentActivity implements
                 eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo"),
                         tmp.getString("hazard") , tmp.getString("type") ,
                         tmp.getString("size") , tmp.getString("trigger") ,
-                        tmp.getInt("injuries") , tmp.getInt("fatalities") ,
-                        tmp.getDouble("prob_trig") , tmp.getString("country")));
+                        tmp.getString("injuries") , tmp.getString("fatalities") ,
+                        tmp.getString("prob_trig") , tmp.getString("country")));
             }
         }catch (JSONException e){
             System.out.println(e);
@@ -178,13 +181,13 @@ public class MapsActivity extends FragmentActivity implements
             eventList.clear();
             JSONObject a = new JSONObject(url);
             JSONArray events = a.getJSONArray("dots");
-            for (int i = 0 ; i < events.length() ; i++){
+            for (int i = 0 ; i < events.length()-1 ; i++){
                 JSONObject tmp = events.getJSONObject(i);
                 eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo"),
                         tmp.getString("hazard") , tmp.getString("type") ,
                         tmp.getString("size") , tmp.getString("trigger") ,
-                        tmp.getInt("injuries") , tmp.getInt("fatalities") ,
-                        tmp.getDouble("prob_trig") , tmp.getString("country")));
+                        tmp.getString("injuries") , tmp.getString("fatalities") ,
+                        tmp.getString("prob_trig") , tmp.getString("country")));
             }
         }catch (JSONException e){
             System.out.println(e);
