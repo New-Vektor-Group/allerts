@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">allert</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="Coutnry">
+        <item>Choose country</item>
+        <item>Moldova</item>
+        <item>Ukraine</item>
+        <item>Romania</item>
+    </string-array>
+
+    <string-array name="RegOfMd">
+        <item>Regions of Moldova</item>
+        <item>Chișinau</item>
+        <item>Orhei</item>
+        <item>Balți</item>
+    </string-array>
+
+    <string-array name="RegOfUk">
+        <item>Regions of Ukraine</item>
+        <item>Hmelisina</item>
+        <item>Kiev</item>
+        <item>Lvov</item>
+    </string-array>
+
+    <string-array name="RegOfRo">
+        <item>Regions of Romania</item>
+        <item>București</item>
+        <item>Craiova</item>
+        <item>Cluj-Napoca</item>
+    </string-array>
+    <string-array name="RegOfEmpty">
+        <item>  </item>
+
+    </string-array>
+</resources>

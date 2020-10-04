@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1050672439/allert.iml" filepath="$PROJECT_DIR$/.idea/modules/-1050672439/allert.iml" group="allert" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/allert-app.iml" filepath="$PROJECT_DIR$/.idea/modules/allert-app.iml" group="allert/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/909637352/allerts-allert.iml" filepath="$PROJECT_DIR$/.idea/modules/909637352/allerts-allert.iml" group="allert" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="allert/app" />
+    </modules>
+  </component>
+</project>
