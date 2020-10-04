@@ -148,7 +148,12 @@ public class MapsActivity extends FragmentActivity implements
 //            MapsFun.createMarker(mMap, new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
             findAroundAndCreateMarkers(new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
         }
+
+        Intent i = new Intent(MapsActivity.this, InfoMap.class);
+        startActivity(i);
     }
+
+
     public void findAroundAndCreateMarkers(LatLng latLng){
         String url = getResponse("https://api.nvg-group.com/alert.php?la=" + latLng.latitude + "&lo="+ latLng.longitude);
         try {

@@ -15,10 +15,10 @@ import java.util.List;
 
 public class AdapterInfo  extends RecyclerView.Adapter<AdapterInfo.Viewholder> {
 
-    private List<ModelClassInfo> modelClassList;
+    private List<ModelClassInfo> modelClassListInfo;
 
-    public AdapterInfo(List<ModelClassInfo> modelClassList){
-        this.modelClassList = modelClassList;
+    public AdapterInfo(List<ModelClassInfo> modelClassListInfo){
+        this.modelClassListInfo = modelClassListInfo;
     }
 
     @NonNull
@@ -30,15 +30,15 @@ public class AdapterInfo  extends RecyclerView.Adapter<AdapterInfo.Viewholder> {
 
     @Override
     public void onBindViewHolder(@NonNull Viewholder viewholder, int position) {
-        int resource = modelClassList.get(position).getImageIcon();
-        String title = modelClassList.get(position).getTitle();
-        String body = modelClassList.get(position).getBody();
+        int resource = modelClassListInfo.get(position).getImageIcon();
+        String title = modelClassListInfo.get(position).getTitle();
+        String body = modelClassListInfo.get(position).getBody();
         viewholder.setData(resource,title,body);
     }
 
     @Override
     public int getItemCount() {
-        return modelClassList.size();
+        return modelClassListInfo.size();
     }
 
 
