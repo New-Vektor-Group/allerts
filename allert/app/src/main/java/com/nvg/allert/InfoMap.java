@@ -41,9 +41,15 @@ public class InfoMap extends Activity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerViewInfo.setLayoutManager(layoutManager);
 
-        List<ModelClassInfo> modelClassListInfo = new ArrayList<>();        // здесь утсанавливаем значения которые хотим отобразить по примеру
-        //modelClassListInfo.add(new ModelClassInfo(R.drawable.logo_full, "Страна", "Landslides probability: " , " latLNg",
-                //" hazard"));
+        List<ModelClassInfo> modelClassListInfo = new ArrayList<>();
+        // здесь утсанавливаем значения которые хотим отобразить по примеру
+        for(Event i : eventList) {
+            modelClassListInfo.add(new ModelClassInfo(R.drawable.logo_full, "Country : " + i.country
+                    , "Landslides probability: " + i.prob_trig
+                    , i.latLng.toString(), " hazard : " + i.hazard
+                    , "Type : " + i.type , "Size : " + i.size , "Trigger : " + i.trigger
+                    , "Injuries : " + i.injuries , "Fatalities : " + i.fatalities ));
+        }
 
 
 
