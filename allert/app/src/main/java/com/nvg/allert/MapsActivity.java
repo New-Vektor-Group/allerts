@@ -35,7 +35,7 @@ import java.util.concurrent.ExecutionException;
 
 
 public class MapsActivity extends FragmentActivity implements
-        OnMapReadyCallback , LocationListener {
+        OnMapReadyCallback {
 
     private GoogleMap mMap;
     private LocationManager locationManager;
@@ -54,19 +54,19 @@ public class MapsActivity extends FragmentActivity implements
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-//        Update User Location
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+////        Update User Location
+//        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return;
+//        }
+//        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
         intent = getIntent();
         System.out.println();
     }
@@ -111,21 +111,21 @@ public class MapsActivity extends FragmentActivity implements
         });
     }
 
-    @Override
-    public void onLocationChanged(@NonNull Location location) {
-        userLocation = location;
-        checkLocationEnable = true;
-    }
-
-    @Override
-    public void onProviderEnabled(@NonNull String provider) {
-        checkLocationEnable = true;
-    }
-
-    @Override
-    public void onProviderDisabled(@NonNull String provider) {
-        checkLocationEnable = false;
-    }
+//    @Override
+//    public void onLocationChanged(@NonNull Location location) {
+//        userLocation = location;
+//        checkLocationEnable = true;
+//    }
+//
+//    @Override
+//    public void onProviderEnabled(@NonNull String provider) {
+//        checkLocationEnable = true;
+//    }
+//
+//    @Override
+//    public void onProviderDisabled(@NonNull String provider) {
+//        checkLocationEnable = false;
+//    }
     //http request
     private String getResponse(String endpoint) {
         HttpHelper helper = new HttpHelper();
@@ -141,16 +141,16 @@ public class MapsActivity extends FragmentActivity implements
     //Button to go setting(GPS)
     public void onClickInfoButton(View view)
     {
-        if(userLocation == null && checkLocationEnable)
-            Toast.makeText(getApplicationContext(), "Wait a little", Toast.LENGTH_LONG).show();
-        if(userLocation == null && !checkLocationEnable) {
-            Toast.makeText(getApplicationContext(), "Turn on Location", Toast.LENGTH_LONG).show();
-//            startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-        }
-        if(userLocation != null) {
-//            MapsFun.createMarker(mMap, new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
-            findAroundAndCreateMarkers(new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
-        }
+//        if(userLocation == null && checkLocationEnable)
+//            Toast.makeText(getApplicationContext(), "Wait a little", Toast.LENGTH_LONG).show();
+//        if(userLocation == null && !checkLocationEnable) {
+//            Toast.makeText(getApplicationContext(), "Turn on Location", Toast.LENGTH_LONG).show();
+////            startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+//        }
+//        if(userLocation != null) {
+////            MapsFun.createMarker(mMap, new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
+//            findAroundAndCreateMarkers(new LatLng(userLocation.getLatitude(), userLocation.getLongitude()));
+//        }
 
         Intent i = new Intent(MapsActivity.this, InfoMap.class);
         startActivity(i);
