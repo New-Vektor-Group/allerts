@@ -8,6 +8,7 @@ import android.view.DragEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class ChoseRegion extends Activity{
 
     Spinner dropdown , regionSpiner;
+    ImageView imgLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,8 @@ public class ChoseRegion extends Activity{
     {
         dropdown=findViewById(R.id.countrySpiner);
         regionSpiner = findViewById(R.id.regionSpiner);
+        this.imgLogo = (ImageView)this.findViewById(R.id.imageView5);
+        imgLogo.setImageResource(R.drawable.logo);
     }
 
 
