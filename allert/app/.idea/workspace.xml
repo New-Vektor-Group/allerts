@@ -9,7 +9,6 @@
     <list default="true" id="696f327e-5857-4968-beb8-3c2e04a43d12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/MapsFun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/MapsFun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +52,11 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/res/drawable" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.allert-app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -223,21 +227,5 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="789" y="359" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1601720787180" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nvg/allert/resourseForMap/MapsFun.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nvg/allert/MapsActivity.java</url>
-          <line>185</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

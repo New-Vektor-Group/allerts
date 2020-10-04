@@ -87,7 +87,7 @@ public class MapsActivity extends FragmentActivity implements
         if(intent.hasExtra("la")) {
             LatLng tmp = new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0));
             findAroundAndCreateMarkers(tmp);
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tmp, 15.f));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tmp, 8.f));
 //            MapsFun.createMarker(mMap, new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
             intent = null;
         }
@@ -171,7 +171,7 @@ public class MapsActivity extends FragmentActivity implements
         mMap.clear();
         if(!(eventList.isEmpty())) {
             for (Event i : eventList) {
-                MapsFun.createMarker(mMap , i.latLng);
+                MapsFun.createMarker(mMap , i);
             }
         }
     }
@@ -197,7 +197,7 @@ public class MapsActivity extends FragmentActivity implements
         mMap.clear();
         if(!(eventList.isEmpty())) {
             for (Event i : eventList) {
-                MapsFun.createMarker(mMap , i.latLng);
+                MapsFun.createMarker(mMap , i);
             }
         }
     }
