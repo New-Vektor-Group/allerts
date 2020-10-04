@@ -82,6 +82,7 @@ public class MapsActivity extends FragmentActivity implements
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        findAllAndCreateMarkers();
         if(intent.hasExtra("la")) {
             findAroundAndCreateMarkers(new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
 //            MapsFun.createMarker(mMap, new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0)));
@@ -147,6 +148,32 @@ public class MapsActivity extends FragmentActivity implements
     }
     public void findAroundAndCreateMarkers(LatLng latLng){
         String url = getResponse("https://api.nvg-group.com/alert.php?la=" + latLng.latitude + "&lo="+ latLng.longitude);
+        try {
+            eventList.clear();
+            JSONObject a = new JSONObject(url);
+            JSONArray events = a.getJSONArray("dots");
+            for (int i = 0 ; i < events.length() ; i++){
+                JSONObject tmp = events.getJSONObject(i);
+                eventList.add(new Event(tmp.getDouble("la") , tmp.getDouble("lo"),
+                        tmp.getString("hazard") , tmp.getString("type") ,
+                        tmp.getString("size") , tmp.getString("trigger") ,
+                        tmp.getInt("injuries") , tmp.getInt("fatalities") ,
+                        tmp.getDouble("prob_trig") , tmp.getString("country")));
+            }
+        }catch (JSONException e){
+            System.out.println(e);
+            System.out.println("Response parsing error");
+            return;
+        }
+        mMap.clear();
+        if(!(eventList.isEmpty())) {
+            for (Event i : eventList) {
+                MapsFun.createMarker(mMap , i.latLng);
+            }
+        }
+    }
+    public void findAllAndCreateMarkers(){
+        String url = getResponse("https://api.nvg-group.com/alert.php?alerts");
         try {
             eventList.clear();
             JSONObject a = new JSONObject(url);

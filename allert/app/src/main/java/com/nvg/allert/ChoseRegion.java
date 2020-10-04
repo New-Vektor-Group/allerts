@@ -15,7 +15,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class ChoseRegion extends Activity{
 
-    Spinner dropdown;
+    Spinner dropdown , regionSpiner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,21 +74,62 @@ public class ChoseRegion extends Activity{
     void init()
     {
         dropdown=findViewById(R.id.countrySpiner);
+        regionSpiner = findViewById(R.id.regionSpiner);
     }
 
 
     public void onClickNextMap(View view){
         Intent i = new Intent(ChoseRegion.this, MapsActivity.class);
         LatLng tmpRegion = null;
+        String region = regionSpiner.getSelectedItem().toString();
         switch (dropdown.getSelectedItem().toString()){
             case "Moldova":
-                tmpRegion = new LatLng(47.025597, 28.830562);
+                switch (region){
+                    case"Chișinau":
+                        tmpRegion = new LatLng(47.025597, 28.830562);
+                        break;
+                    case"Orhei":
+                        tmpRegion = new LatLng(47.3757, 28.8227);
+                        break;
+                    case"Balți":
+                        tmpRegion = new LatLng(47.7567, 27.9088);
+                        break;
+                    default:
+                        tmpRegion = new LatLng(47.025597, 28.830562);
+                        break;
+                }
                 break;
             case "Ukraine":
-                tmpRegion = new LatLng(50.434389, 30.556316);
+                switch (region){
+                    case"Hmelisina":
+                        tmpRegion = new LatLng(49.3913, 26.9912);
+                        break;
+                    case"Kiev":
+                        tmpRegion = new LatLng(50.4006, 30.4518);
+                        break;
+                    case"Lvov":
+                        tmpRegion = new LatLng(49.812, 23.9976);
+                        break;
+                    default:
+                        tmpRegion = new LatLng(50.434389, 30.556316);
+                        break;
+                }
                 break;
             case "Romania":
-                tmpRegion = new LatLng(44.437558, 26.090253);
+                switch (region){
+                    case"București":
+                        tmpRegion = new LatLng(44.3378, 26.0098);
+                        break;
+                    case"Craiova":
+                        tmpRegion = new LatLng(44.2504, 23.7535);
+                        break;
+                    case"Cluj-Napoca":
+                        tmpRegion = new LatLng(46.5856, 23.4923);
+                        break;
+                    default:
+                        tmpRegion = new LatLng(44.437558, 26.090253);
+                        break;
+                }
                 break;
         }
         if(tmpRegion != null){
