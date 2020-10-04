@@ -42,6 +42,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="49dp"
+        android:onClick="OnClickBut"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

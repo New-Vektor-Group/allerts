@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.nvg.allert.R;
 
 import java.util.List;
@@ -65,6 +66,7 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.Viewholder> {
             imageView.setImageResource(imageResource);
             title.setText(titleText);
             body.setText(bodyText);
+
         }
     }
 }

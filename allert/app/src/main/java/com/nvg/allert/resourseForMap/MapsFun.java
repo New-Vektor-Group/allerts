@@ -14,10 +14,10 @@ import java.util.List;
 public class MapsFun {
     public static void createMarker(GoogleMap mMap, Event tmp){
         MarkerOptions marker = new MarkerOptions().position(tmp.latLng).title(tmp.hazard);
-        if(tmp.hazard == "earthquakes"){
-            marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.markerrpolznimontazhnayaoblast));
+        if(tmp.hazard.equals("earthquakes")){
+            marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon8treaska));
         }else
-            marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.markerrpolznimontazhnayaoblast));
+            marker.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon8opolzeni));
         mMap.addMarker(marker);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(tmp.latLng));
     }

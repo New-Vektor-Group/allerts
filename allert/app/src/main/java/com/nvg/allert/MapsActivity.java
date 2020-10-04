@@ -84,6 +84,8 @@ public class MapsActivity extends FragmentActivity implements
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         findAllAndCreateMarkers();
+        if (intent.hasExtra("getAll"))
+            findAllAndCreateMarkers();
         if(intent.hasExtra("la")) {
             LatLng tmp = new LatLng(intent.getDoubleExtra("la", 0), intent.getDoubleExtra("lo", 0));
             findAroundAndCreateMarkers(tmp);
