@@ -9,12 +9,17 @@ public class ModelClassInfo {
     String latLng, hazard, type, size, trigger, injuries, fatalities, prob_trig, country;
 
 
-    public ModelClassInfo(int imageIcon, String title, String body, String latLng, String hazard){
+    public ModelClassInfo(int imageIcon, String title, String body, String latLng, String hazard, String type, String size, String trigger, String country, String fatalities){
         this.imageIcon = imageIcon;
         this.title=title;
         this.body=body;
         this.latLng = latLng;
         this.hazard = hazard;
+        this.type = type;
+        this.size = size;
+        this.trigger = trigger;
+        this.country = country;
+        this.fatalities = fatalities;
     }
 
     public int getImageIcon() {
