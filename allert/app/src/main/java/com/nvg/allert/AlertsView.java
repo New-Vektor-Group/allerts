@@ -32,6 +32,7 @@ public class AlertsView extends Activity {
     List<Event> eventList = new ArrayList<>();
     List<ModelClass> modelClassList;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_alerts_activity);

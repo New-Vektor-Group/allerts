@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
-        android:fontFamily="@font/montserrat_bold"
+        android:fontFamily="sans-serif-black"
         android:text="Research in the regions"
         android:textColor="#FFFDFD"
         android:textSize="24sp"

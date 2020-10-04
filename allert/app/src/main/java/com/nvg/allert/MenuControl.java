@@ -22,14 +22,14 @@ public class MenuControl extends Activity {
     }
     void init(){
         this.imgAlert = (ImageView)this.findViewById(R.id.imageView);           // подключаем картинку
-        imgAlert.setImageResource(R.drawable.shapka_s_logo_norm);  // находим её по имени в draweble
+        imgAlert.setImageResource(R.drawable.logo_full);  // находим её по имени в draweble
         tvAlerts = findViewById(R.id.txtViewInfoAlerts);
-        tvAlerts.setText("This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter " +
-                "Rams, both of whom have work featured in the Museum’s collection. " +
-                "The large "+ getNumAlertsFromAI() +" alerts features a numbered face, and the smaller watch has only index lines.");
+        tvAlerts.setText("Allert is an application designed to determine the likelihood of natural disasters. The data in the application is updated every day, " +
+                "after which the neural network processes the received data and makes a prediction for tomorrow.\n \n" +
+                "Found " + getNumAlertsFromAI() + " alerts for tomorrow.");
     }
 
-    public void onClickSelectMap(View view)     //переходим на новую активити
+    public void onClickSelectAlert(View view)     //переходим на новую активити
     {
         Intent i = new Intent(MenuControl.this, AlertsView.class);
         startActivity(i);

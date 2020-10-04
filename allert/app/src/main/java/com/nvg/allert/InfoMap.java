@@ -32,7 +32,7 @@ public class InfoMap extends Activity {
         recyclerViewInfo.setLayoutManager(layoutManager);
 
         List<ModelClassInfo> modelClassListInfo = new ArrayList<>();        // здесь утсанавливаем значения которые хотим отобразить по примеру
-        modelClassListInfo.add(new ModelClassInfo(R.drawable.shapka_s_logo_norm, "Страна", "Landslides probability: " , " latLNg",
+        modelClassListInfo.add(new ModelClassInfo(R.drawable.logo_full, "Страна", "Landslides probability: " , " latLNg",
                 " hazard"));
 
 
